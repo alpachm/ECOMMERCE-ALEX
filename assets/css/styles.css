@@ -145,6 +145,7 @@ nav {
 
     position: fixed;
     right: -100%;
+    top: 0;
     z-index: 2000;
 }
 
@@ -621,6 +622,10 @@ footer p {
     .menu__cart {
         width: 50%;
         max-width: 400px;
+    }
+
+    .total__cart {
+        justify-content: center;
     }
 }
 
