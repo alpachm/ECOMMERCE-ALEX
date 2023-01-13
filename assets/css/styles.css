@@ -112,9 +112,10 @@ nav {
     width: 100%;
     height: calc(100vh - 50px);
 
-    position: absolute;
-    bottom: -553px;
+    position: fixed;
+    top: 50px;
     right: 0;
+    z-index: 3000;
 
     display: flex;
     flex-direction: column;
