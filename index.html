@@ -37,14 +37,14 @@
 
         <div class="text__nav desktop">
           <a href="#">Home</a>
-          <a href="#">Products</a>
+          <a href="#products">Products</a>
         </div>
       </div>
 
       <div class="icons__nav">
         <i class='bx bx-moon'></i>
         <i class='bx bx-sun'></i>
-        <i class='bx bx-cart'></i>
+        <i class='bx bx-cart'><span class="num__cart"></span></i>
         <i class='bx bx-menu-alt-right mobile'></i>
       </div>
     </nav>
@@ -62,19 +62,21 @@
   <div class="menu__cart">
 
     <div class="empty__cart">
-      <h3>My Cart</h3>
-      <img src="./assets/images/empty-cart.png" alt="">
-      <h3>Your cart is empty</h3>
-      <p>You can add items to your cart by clicking on the "+" button on the product page.</p>
+
+      <div class="text__empty__cart">
+        <h3>My Cart</h3>
+        <img src="./assets/images/empty-cart.png" alt="">
+        <h3>Your cart is empty</h3>
+        <p>You can add items to your cart by clicking on the "+" button on the product page.</p>
+      </div>
+
+      <div class="select_product_container">
+
+      </div>
     </div>
 
     <div class="total__cart">
 
-      <div class="price__total">
-        <span>2 items</span>
-        <span>$48.00</span>
-      </div>
-      <button class="btn__buy">Comprar</button>
     </div>
 
     <i class='bx bx-x'></i>
@@ -128,7 +130,7 @@
 
   <!-- ----------------------------PRODUCTS -->
 
-  <section class="products">
+  <section class="products" id="products">
     <div class="productos__container">
 
     </div>
@@ -179,7 +181,7 @@
 
 
 
-
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./assets/js/main.js" type="module"></script>
 </body>
 

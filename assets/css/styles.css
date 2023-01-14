@@ -29,6 +29,10 @@
     transition: all .3s;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* --------------------REUTILIZABLES */
 
 body {
@@ -44,6 +48,29 @@ img {
 .desktop,
 .bx-sun {
     display: none;
+}
+
+.bx-cart {
+    position: relative;
+}
+
+.num__cart {
+    position: absolute;
+    top: 12px;
+    right: 0px;
+
+    background: var(--titleColor);
+    color: var(--headerColor);
+    font-size: 10px;
+    font-weight: 700;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* --------------------HEADER */
@@ -165,11 +192,19 @@ nav {
 
 .empty__cart {
     height: 70%;
+    overflow-y: scroll;
+}
+
+.empty__cart::-webkit-scrollbar {
+    display: none;
+}
+
+.text__empty__cart {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .empty__cart h3 {
@@ -184,12 +219,17 @@ nav {
     width: 300px;
 }
 
+.select_product_container {
+    display: grid;
+    gap: 2rem;
+}
+
 .total__cart {
     height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 1rem;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .price__total {
@@ -198,11 +238,22 @@ nav {
     align-items: center;
 }
 
-.btn__buy {
-    background: var(--firstColor);
-    color: var(--headerColor);
+.price__total span {
+    font-weight: 500;
+    color: var(--titleColor);
+}
+
+.btn__of {
+    background: none;
+    color: transparent;
     border: none;
     padding: .8rem 0;
+}
+
+.btn__buy {
+    cursor: pointer;
+    background: var(--firstColor);
+    color: var(--headerColor);
 }
 
 .select__product {
@@ -412,7 +463,20 @@ main {
     gap: 2rem;
 }
 
-.box__product {
+.empty__products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.empty__products h3 {
+    color: var(--titleColor);
+    font-size: 1.5rem;
+}
+
+.productos__container .box__product {
     width: 200px;
     margin: auto;
 }
@@ -432,7 +496,9 @@ main {
     background: var(--headerColor);
     color: var(--titleColor);
     font-size: 25px;
-    padding: .5rem;
+    width: 40px;
+    height: 40px;
+    border: none;
     border-radius: 50%;
     box-shadow: 1px 1px 5px rgb(0 0 0 / .3);
 
