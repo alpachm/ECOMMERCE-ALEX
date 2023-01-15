@@ -60,7 +60,7 @@ function printProducts() {
   } else {
     products.forEach(({ id, name, price, stock, image }) => {
       html += `
-          <div class="box__product">
+          <div class="box__product ${name}">
           <div class="img__product">
             <img src="${image}" alt="">
             <span id="${id}" class="btn_product"><i class='bx bx-plus btn__add'></i></span>
@@ -370,4 +370,13 @@ menuCart.addEventListener('click', function (e) {
 printProducts();
 printTotalCart();
 printNumCart();
+
+mixitup('.productos__container', {
+  selectors: {
+    target: '.box__product'
+  },
+  animation: {
+    duration: 300
+  }
+});
 

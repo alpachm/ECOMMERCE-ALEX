@@ -98,8 +98,8 @@
         <span>$14.00</span>
 
         <div class="main__btn">
-          <button>Discover</button>
-          <button>ADD TO CART</button>
+          <button onclick="location.href='#products'">Discover</button>
+          <button class="add__cart">ADD TO CART</button>
         </div>
       </div>
     </div>
@@ -109,19 +109,19 @@
 
   <section class="show__all">
     <div class="show__container">
-      <div class="box_show">
+      <div class="box_show" data-filter="all">
         <span>Show All</span>
         <p>show all products</p>
       </div>
-      <div class="box_show">
+      <div class="box_show" data-filter=".Hoodies">
         <span>Hoodies</span>
         <p>3 products</p>
       </div>
-      <div class="box_show">
+      <div class="box_show" data-filter=".Shirt">
         <span>Shirts</span>
         <p>4 products</p>
       </div>
-      <div class="box_show">
+      <div class="box_show" data-filter=".Sweatshirts">
         <span>Sweatshirts</span>
         <p>4 products</p>
       </div>
@@ -160,9 +160,9 @@
       <div class="box__info">
         <span>Social</span>
         <div class="icons__info">
-          <i class='bx bxl-facebook'></i>
-          <i class='bx bxl-twitter'></i>
-          <i class='bx bxl-instagram-alt'></i>
+          <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter'></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
         </div>
       </div>
     </div>
@@ -182,6 +182,7 @@
 
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assets/js/mixitup.min.js"></script>
   <script src="./assets/js/main.js" type="module"></script>
 </body>
 

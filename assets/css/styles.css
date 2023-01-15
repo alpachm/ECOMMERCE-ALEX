@@ -434,6 +434,7 @@ main {
     display: grid;
     gap: 10px;
     border-right: 1px solid var(--textColor);
+    cursor: pointer;
 }
 
 .show__container .box_show:nth-last-child(1) {
