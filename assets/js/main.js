@@ -37,6 +37,8 @@ let emptyCart = document.querySelector('.text__empty__cart');
 let productCartContainer = document.querySelector('.select_product_container');
 let totalCart = document.querySelector('.total__cart');
 let numCart = document.querySelector('.num__cart');
+let header = document.querySelector('header');
+let floatBtn = document.querySelector('.float__btn');
 
 let objCart = {};
 
@@ -177,8 +179,15 @@ function printNumCart() {
 
 // MENU MOBILE
 
-iconMenu.addEventListener('click', function () {
+const menuMobileA = document.querySelectorAll('.menu__mobile a')
+
+function clickear() {
   menuMobile.classList.toggle('show__menu')
+}
+
+iconMenu.addEventListener('click', clickear)
+menuMobileA.forEach((item) => {
+  item.addEventListener('click', clickear)
 })
 
 // DARKMODE 
@@ -366,6 +375,24 @@ menuCart.addEventListener('click', function (e) {
   printTotalCart();
   printNumCart();
 })
+
+// HEADER 
+
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 70) {
+    header.classList.add('header__scroll')
+  } else {
+    header.classList.remove('header__scroll')
+  }
+
+  if (window.scrollY > 400) {
+    floatBtn.classList.add('float__btn__active')
+  } else {
+    floatBtn.classList.remove('float__btn__active')
+  }
+
+})
+
 
 printProducts();
 printTotalCart();
